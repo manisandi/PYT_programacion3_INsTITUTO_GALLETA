@@ -1,0 +1,288 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+/* Variables de color */
+:root {
+    --colorPrincipal: #003366; /* Azul marino */
+    --colorSecundario: #F5A623; /* Amarillo más oscuro */
+    --colorContraste: #F2A900; /* Amarillo dorado */
+    --colorNeutro: #f0f0f0; /* Gris claro */
+    --colorGris: #d3d3d3; /* Gris claro */
+    --fuente: "Cormorant Garamond", cursive;
+}
+
+* {
+    font-family: var(--fuente);
+    font-size: 20px;
+    line-height: 1em;
+}
+
+/* Estilos del header */
+header {
+    background-color: var(--colorPrincipal);
+    color: var(--colorNeutro);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.navbar-nav .nav-link {
+    color: var(--colorNeutro) ;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.navbar-nav .nav-link:hover {
+    color: var(--colorContraste) ;
+    border-bottom: 2px solid var(--colorContraste);
+    transform: translateY(-2px);
+}
+
+.navbar-toggler-icon {
+    background-color: var(--colorNeutro);
+}
+
+.navbar-brand {
+    color: var(--colorContraste) ;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.navbar-brand:hover {
+    color: var(--colorSecundario) ;
+    transform: translateY(-2px);
+}
+
+/* Estilo para mantener la relación de aspecto 21:9 */
+.aspect-ratio-box {
+    position: relative;
+    width: 100%;
+    padding-top: 42.857%; /* (9/21)*100 = 42.857% */
+}
+
+.aspect-ratio-box iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* Estilos generales */
+.bg-principal {
+    background-color: var(--colorPrincipal);
+}
+
+footer {
+    background-color: var(--colorSecundario);
+    padding: 1em;
+}
+
+/* Estilo para títulos */
+h1, h2 {
+    color: var(--colorContraste);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    font-size: 3em;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+/* Estilos para enlaces de navegación */
+.nav-link, .active {
+    color: var(--colorNeutro) ;
+}
+
+.nav-link:hover {
+    font-weight: bolder;
+    border-bottom: 2px solid var(--colorContraste);
+}
+
+/* Estilos para la sección de Testimonios */
+.testimonios .card {
+    border: 1px solid #ddd;
+    border-radius: .5rem;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    background-color: var(--colorGris);
+    transform: perspective(500px) rotateX(0deg) rotateY(0deg);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.testimonios .card:hover {
+    transform: perspective(500px) rotateX(-5deg) rotateY(5deg);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.testimonios .card-body {
+    padding: 1.5rem;
+}
+
+.testimonios .card-title {
+    font-size: 1.25rem;
+    margin-bottom: .5rem;
+    color: var(--colorPrincipal);
+}
+
+/* Estilos para la sección de Por Qué Elegirnos */
+.why-choose-us {
+    padding: 4rem;
+    background-color: var(--colorGris);
+    border-radius: .4rem;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    border: 2px solid var(--colorPrincipal);
+    transform: perspective(500px) rotateX(0deg) rotateY(0deg);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Estilo para tarjetas */
+.card {
+    border: 1px solid #ddd;
+    border-radius: .2em;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    background-color: var(--colorGris);
+    transform: perspective(500px) rotateX(0deg) rotateY(0deg);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card-body {
+    padding: 1.5rem;
+}
+
+/* Estilos para el contenedor de cursos */
+#coursesContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Estilos para la tabla */
+.table {
+    padding: 4rem;
+    background-color: var(--colorGris);
+    border-radius: .4rem;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    border: 2px solid var(--colorPrincipal);
+}
+
+.table tbody {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    border: 2px solid var(--colorPrincipal);
+}
+
+/* Estilos para columnas */
+.col-md-4-px-3 {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    border: 2px solid var(--colorPrincipal);
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .navbar-brand {
+        font-size: 1.5em;
+    }
+
+    .nav-link {
+        font-size: 1em;
+    }
+
+    h1 {
+        font-size: 2.5em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    .card {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .navbar-brand {
+        font-size: 1.25em;
+    }
+
+    .nav-link {
+        font-size: 0.9em;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.25em;
+    }
+
+    .testimonios .card-body {
+        padding: 1rem;
+    }
+}
+
+
+/* Estilo para el contenedor de imágenes */
+/* Estilo para el contenedor de imágenes */
+.imagenes-container {
+    display: flex; /* Usa Flexbox para alinear las imágenes */
+    justify-content: center; /* Centra las imágenes horizontalmente */
+    gap: 10px; /* Espacio entre imágenes */
+    margin-bottom: 20px; /* Espacio debajo del contenedor de imágenes */
+    flex-wrap: wrap; /* Permite que las imágenes se envuelvan en varias líneas si es necesario */
+}
+
+/* Estilo para cada imagen */
+.imagen-item {
+    flex: 1; /* Hace que cada imagen ocupe el mismo espacio disponible */
+    max-width: 33%; /* Limita el ancho máximo a un tercio del contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    overflow: hidden; /* Oculta cualquier parte de la imagen que se desborde */
+    display: flex; /* Usa Flexbox para alinear el contenido interno */
+    justify-content: center; /* Centra la imagen dentro del contenedor */
+    align-items: center; /* Centra la imagen verticalmente dentro del contenedor */
+}
+
+.imagen-item img {
+    max-width: 80%; /* Asegura que la imagen no exceda el ancho del contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    display: block; /* Elimina el espacio en blanco debajo de la imagen */
+}
+
+
+/* Estilo para la tabla */
+.table-responsive {
+    overflow-x: auto; /* Permite el desplazamiento horizontal solo si es necesario */
+}
+
+#detallesCursos {
+    width: 80%; /* Asegura que la tabla se ajuste al ancho del contenedor */
+    table-layout: fixed; /* Ajusta el ancho de las columnas según el contenido */
+    box-sizing: border-box; /* Incluye el padding y el borde en el ancho total */
+}
+
+/* Estilo para las celdas de la tabla */
+#detallesCursos td, #detallesCursos th {
+    padding: 10px; /* Espacio interior en las celdas */
+    border: 1px solid #dee2e6; /* Color de borde de las celdas */
+    text-align: left; /* Alinea el texto a la izquierda */
+    word-wrap: break-word; /* Permite que el texto largo se ajuste dentro de las celdas */
+}
+
+
+/* Contenedor de la tabla centrado */
+.table-container {
+    display: flex; /* Usa Flexbox para alinear los elementos */
+    justify-content: center, important!; /* Centra la tabla horizontalmente */
+    margin-top: 20px; /* Espacio superior para la tabla */
+    margin-bottom: 20px; /* Espacio inferior para la tabla */
+}
+
+/* Asegura que la tabla no sea más ancha que su contenedor */
+.table-responsive {
+    width: 100%; /* Asegura que el contenedor sea de ancho completo */
+    max-width: 800px; /* Opcional: Limita el ancho máximo de la tabla */
+}
+
+
+

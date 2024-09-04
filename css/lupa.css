@@ -1,0 +1,33 @@
+@import "styles.css";
+
+
+header {
+    display: flex;
+    justify-content: flex-end; /* Alinea los elementos al final del header */
+    align-items: center; /* Alinea verticalmente */
+    padding: 10px;
+    background-color: #f0f0f0;
+}
+
+form {
+    display: flex;
+    align-items: center;
+}
+
+input[type="text"] {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 5px;
+}
+
+button {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+button img {
+    width: 20px; /* Ajusta el tamaño del icono de búsqueda según tu imagen */
+    height: 20px;
+}
